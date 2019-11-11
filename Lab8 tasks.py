@@ -1,3 +1,5 @@
+import gfxhat
+
 def ConvertToCsv(fileName):
     f = open(fileName, "r")
     lines = f.readlines()
@@ -10,8 +12,8 @@ def ConvertToCsv(fileName):
         f.write(newline)
     f.close()
 
-# ConvertToCsv("2000_GirlsNames.txt")
-# ConvertToCsv("2000_BoysNames.txt")
+ ConvertToCsv("2000_GirlsNames.txt")
+ ConvertToCsv("2000_BoysNames.txt")
 
 def displayLines():
     fileName = input("Enter the name of a csv file: ")
@@ -29,5 +31,8 @@ def loadDict(fileName):
     d = {}
     for lin in lines:
         a,b = lin.split(",")
-        d[a]=b
+        d[b.rstrip()] = a
     return d
+
+d=loadDict("font3.txt")
+print(d['a'])
