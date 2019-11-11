@@ -12,8 +12,8 @@ def ConvertToCsv(fileName):
         f.write(newline)
     f.close()
 
- ConvertToCsv("2000_GirlsNames.txt")
- ConvertToCsv("2000_BoysNames.txt")
+ConvertToCsv("2000_GirlsNames.txt")
+ConvertToCsv("2000_BoysNames.txt")
 
 def displayLines():
     fileName = input("Enter the name of a csv file: ")
